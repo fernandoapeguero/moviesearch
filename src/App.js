@@ -22,13 +22,19 @@ function App() {
     console.log(`Calling the Movie Api with ${inputQuery}`)
     const fixedQueryString = inputQuery ? inputQuery.split(" ").join("%20") : "crime";
     
-    const apiUrl =  `https://api.themoviedb.org/3/search/movie?api_key=<<api key>>&language=en-US&query=${fixedQueryString}&page=1&include_adult=false`  
+    const apiUrl =  `https://api.themoviedb.org/3/search/movie?api_key=c6730ed582b4839591ed194c26e09262&language=en-US&query=${fixedQueryString}&page=1&include_adult=false`  
     console.log(apiUrl)
-    const result = await fetch(apiUrl)
+    try {
+      const result = await fetch(apiUrl)
     
-    const json = await result.json()
+      const json = await result.json()
+  
+      setMovieList(json.results)
 
-    setMovieList(json.results)
+    } catch(error){
+      console.log("Could not fetch Data");
+    }
+ 
 
     console.log( movies);
   }
