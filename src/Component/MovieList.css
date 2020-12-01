@@ -1,40 +1,4 @@
 
-/*
-.card {
-    margin: 3em;
-    display: grid;
-    grid-template-columns: minmax(150px , 300px) 1fr;
-    grid-gap: 20px;
-    background-color: #222;
-    color: white;
-    padding: 4em;
-    border-radius: 20px;
-}
-
-.poster_image {
-    grid-column: 1 / 2;
-    max-height: 400px;
-}
-
-
-.info {
-    grid-column: 2/ -1;
-}
-
-h1 {
-    font-size: 3rem;
-    margin: 0;
-    padding: 0;
-}
-*/
-
-/* .cards_holder {
-
-} */
-
-
-
-
 ::-webkit-scrollbar { 
     display: none; 
     }
@@ -76,9 +40,3 @@ h1 {
 .info:hover {
     opacity: 1;
 }
-
-/* 
-
-p {
-    max-width: 100%;
-} */
