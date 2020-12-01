@@ -1,7 +1,7 @@
 
 import './App.css';
 import SearchMovies from "./Component/SearchMovies";
-import MovieList from "./Component/MovieList";
+import MovieList from "./Component/MovieList/MovieList";
 import React , {useState} from "react";
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
     e.preventDefault();
 
     console.log(`Calling the Movie Api with ${inputName}`)
-    const fixedQueryString = inputName ? inputName.split(" ").join("%20") : "2020";
+    const fixedQueryString = inputName ? inputName.split(" ").join("%20") : "crime";
     
     const apiUrl =  `https://api.themoviedb.org/3/search/movie?api_key=<<api key>>&language=en-US&query=${fixedQueryString}&page=1&include_adult=false`  
     
